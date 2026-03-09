@@ -25,8 +25,42 @@
 
 </head>
 
-<body class="text-2xl font-bold">
-    <h1>GitHub Issue tracker</h1>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="card w-96 bg-base-100 shadow-xl ">
+
+        <div class="card-body items-center justify-center ">
+            <div class="items-end">
+                <img src="./assets/github-logo.png" alt="">
+            </div>
+            <h1 class="text-2xl font-bold text-center">
+                GitHub Issues Tracker
+            </h1>
+
+            <p class="text-center text-gray-500">
+                Sign in to manage your issues
+            </p>
+
+            <input id="username" type="text" placeholder="Enter Username" class="input input-bordered w-full" />
+
+            <input id="password" type="password" placeholder="Enter Password" class="input input-bordered w-full" />
+
+            <button onclick="login()" class="btn btn-primary w-full">
+                Sign In
+            </button>
+
+            <div class="text-sm text-center mt-3 text-gray-500">
+                <p>Username: admin</p>
+                <p>Password: admin123</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
 </body>
- 
+
 </html>
