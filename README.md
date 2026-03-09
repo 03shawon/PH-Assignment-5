@@ -1,128 +1,100 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
-
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
-
----
-
-# Assignment-05: GitHub Issues Tracker
-
-
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
-
-
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
-
-
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
-
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
-
-
----
-
-## 📝 Main Requirements
-
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
---- 
-
-
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status 
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on an issue  card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
-
-
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
-
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
+ 
     - 1️⃣ What is the difference between var, let, and const?
     - 2️⃣ What is the spread operator (...)?
     - 3️⃣ What is the difference between map(), filter(), and forEach()?
     - 4️⃣ What is an arrow function?
     - 5️⃣ What are template literals?
 
+1️⃣ What is the difference between var, let, and const?
 
----
+var, let, and const are used to declare variables in JavaScript, but they behave differently.
 
-## 🛠️ Technology Stack
+var is the old way of declaring variables. It is function-scoped and can be redeclared and updated.
 
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
+let is block-scoped. It can be updated but cannot be redeclared in the same scope.
 
----
+const is also block-scoped, but its value cannot be reassigned after it is declared.
 
-## 🔑 Demo Credentials
+Example:
 
-```text
-Username: admin
-Password: admin123
-```
+var a = 10;
+let b = 20;
+const c = 30;
 
+2️⃣ What is the spread operator (...)?
 
----
+The spread operator (...) is used to expand or spread elements of an array or object into individual elements.
 
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
+It helps to copy, merge, or combine arrays and objects easily.
 
+Example with array:
 
-## 📤 What to submit
-
-- **GitHub Repository Link:**
-- **Live Site Link:**
-
----
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4, 5];
 
 
+3️⃣ What is the difference between map(), filter(), and forEach()?
+
+These are array methods used to work with array data.
+
+map()
+
+Creates a new array by transforming each element.
+
+The original array remains unchanged.
+
+Example:
+
+const numbers = [1, 2, 3];
+const doubled = numbers.map(num => num * 2);
+
+filter()
+
+Creates a new array with elements that match a condition.
+
+Example:
+
+const numbers = [1, 2, 3, 4];
+const even = numbers.filter(num => num % 2 === 0);
+
+forEach()
+
+Runs a function for each array element.
+
+It does not return a new array.
+
+Example:
+
+numbers.forEach(num => {
+  console.log(num);
+});
+
+
+4️⃣ What is an arrow function?
+
+An arrow function is a shorter way to write a function in JavaScript. It uses the => syntax.
+
+It makes the code cleaner and easier to read.
+
+Example:
+
+Normal function:
+
+function add(a, b) {
+  return a + b;
+}
+
+Arrow function:
+
+const add = (a, b) => a + b;
+
+5️⃣ What are template literals?
+
+Template literals are used to create strings with embedded variables. They use backticks (`) instead of single or double quotes.
+
+They allow you to insert variables directly into a string using ${}.
+
+Example:
+
+const name = "Shawon";
+const message = `Hello, my name is ${name}`;
