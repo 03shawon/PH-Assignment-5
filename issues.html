@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Issues</title>
+<link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css" rel="stylesheet"/>
+
+</head>
+
+<body class="bg-gray-100">
+
+
+<!-- Navbar -->
+
+<div class="navbar bg-base-100 shadow px-6">
+
+<div class="flex-1 flex items-center gap-2">
+
+<img src="./assets/github-logo.png" class="w-8 h-8">
+
+<a class="text-xl font-bold">
+GitHub Issues Tracker
+</a>
+
+</div>
+
+
+<div class="flex gap-2">
+
+<input id="searchText"
+type="text"
+placeholder="Search issue"
+class="input input-bordered">
+
+<button onclick="searchIssue()" class="btn btn-primary">
++ New Issue
+</button>
+
+</div>
+
+</div>
+
+
+<div class="max-w-7xl mx-auto p-6">
+
+
+
+<div class="flex justify-between items-start mb-6">
+
+<section class="flex gap-2">
+    <div class="">
+    <img src="./assets/Aperture.png" alt="">
+</div>
+<div class="">
+<h2 id="issueCount" class="text-xl font-bold">
+50 Issues
+</h2>
+
+<p class="text-gray-500 text-sm">
+Track and manage your project issues
+</p>
+
+</div>
+</section>
+
+
+
+<div class="flex gap-5 text-sm">
+
+<div class="flex items-center gap-2">
+
+<span class="w-3 h-3 bg-green-500 rounded-full"></span>
+
+Open
+
+</div>
+
+<div class="flex items-center gap-2">
+
+<span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+
+Closed
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Tabs -->
+
+<div class="tabs tabs-boxed mb-6 items-start justify-start">
+
+<button id="allTab"
+class="tab tab-active"
+onclick="setActiveTab('all')">
+All
+</button>
+
+<button id="openTab"
+class="tab"
+onclick="setActiveTab('open')">
+Open
+</button>
+
+<button id="closedTab"
+class="tab"
+onclick="setActiveTab('closed')">
+Closed
+</button>
+
+</div>
+
+
+<!-- Spinner -->
+
+<div id="spinner" class="text-center hidden">
+
+<span class="loading loading-spinner loading-lg"></span>
+
+</div>
+
+
+
+<div id="issuesContainer"
+class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+</div>
+
+</div>
+
+
+<dialog id="issueModal" class="modal">
+
+<div class="modal-box max-w-2xl" id="modalContent"></div>
+
+</dialog>
+
+
+<script src="issues.js"></script>
+
+</body>
+
+</html>
